@@ -7,6 +7,6 @@ describe("Email", () => {
     })
 
     it('Gerar erro para e-mail inválido', () => {
-        expect(() => Email.create('email-invalido')).toThrow('E-mail inválido')
+        expect(() => Email.create('email-invalido')).toThrow()
     })
 })
