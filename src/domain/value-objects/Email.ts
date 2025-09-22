@@ -13,3 +13,4 @@ export class Email {
         return emailRegex.test(email)
     }
 }
+
