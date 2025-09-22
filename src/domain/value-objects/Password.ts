@@ -1,11 +1,10 @@
 export class Password {
     private constructor(readonly value: string) { }
 
-    static create(pass: string): Password {
-        if (!this.validate(pass)) {
-            throw new Error('Senha inválida')
+    static create(pass: string): Password | undefined {
+        if (this.validate(pass)) {
+            return new Password(pass)
         }
-        return new Password(pass)
     }
 
     private static validate(pass: string): boolean {
