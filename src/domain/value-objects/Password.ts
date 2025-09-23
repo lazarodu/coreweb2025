@@ -1,10 +1,9 @@
 export class Password {
     private constructor(readonly value: string) { }
 
-    static create(pass: string): Password | undefined {
-        if (this.validate(pass)) {
-            return new Password(pass)
-        }
+    static create(pass: string): Password {
+        this.validate(pass)
+        return new Password(pass)
     }
 
     private static validate(pass: string): boolean {
@@ -22,4 +21,3 @@ export class Password {
         return true
     }
 }
-
